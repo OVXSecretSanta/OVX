@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">  
+    <link rel="preload" href="./img/MC25/bg.png" as="image"> 
+    <link rel="preload" href="./img/card_back.png" as="image">
+    <link rel="preload" href="./img/flip.png" as="image">
+    <title>MC25 visual spoiler</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overscroll-behavior: none;
+            background-image: url('img/MC25/bg.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .background {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            overflow-y: scroll;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 1px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 3%;
+            justify-items: center;
+        }
+        .grid-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            visibility: hidden;            
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        .logo {
+            display: block;
+            margin: auto;
+            width: 40%;
+        }
+        .container {
+          position: relative;
+          width: 100%;
+        }
+        .container img {
+          width: 100%;
+          height: auto;
+        }
+        .container .btn {
+          background: url('img/flip.png') no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 15%;
+          height: 11%;
+          cursor: pointer;
+          border: none;
+          position: absolute;
+          top: 6.5%;
+          left: 8.5%;
+          transform: translate(-50%, -50%);
+        }
+        .container .btn:hover {
+          background: url('img/flip-hover.png') no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 15%;
+          height: 11%;
+          cursor: pointer;
+          border: none;
+          position: absolute;
+          top: 6.5%;
+          left: 8.5%;
+          transform: translate(-50%, -50%);
+        }
+        .icon-bar {
+            display: grid;
+            grid-template-columns: 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr;
+            gap: 1px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            justify-items: center;
+            align-items: center;
+        }
+        .icon-bar .icon img {
+            width: 90%;
+            height: auto;
+            display: block;
+            padding: 5%;
+            margin: auto;
+            text-align: center;
+        }
+        .icon-bar .dot img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+    <div class="icon-bar">
+              <div class="icon"><a href="MC25_spoiler.html"><img src="img/MC25/icon.png"></img></a></div>
+        </div>
+        <div class="banner">
+        <img class="logo" src="./img/MC25/logo.png">
+        </div>
+        <div class="grid-container">
+            <div class="container"><img src="img/MC25/Anointed Cursebreaker.png" alt="1" id="1" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Abscond.png" alt="2" id="2" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ambitious Necromancer.png" alt="3" id="3" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ada, the Free.png" alt="4" id="4" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Adiran Scryers.png" alt="5" id="5" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Artificial Sanctity.png" alt="6" id="6" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Aetheric Researcher.png" alt="7" id="7" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Antithesis.png" alt="8" id="8" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Anax's Endeavor.png" alt="9" id="9" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Advanced Powercell.png" alt="10" id="10" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Asamund's Gambit.png" alt="11" id="11" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Agent of Deception.png" alt="12" id="12" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Arroyo, Infinitely Branching.png" alt="13" id="13" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Auros, the Red King.png" alt="14" id="14" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Agency Doorbreakers.png" alt="15" id="15" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Astral Capricine.png" alt="16" id="16" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Arcane Rebound.png" alt="17" id="17" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Blood Artist.png" alt="18" id="18" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Blood Cult Covenant.png" alt="19" id="19" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Arbor Protector.png" alt="20" id="20" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Atal, the Shroudmaker.png" alt="21" id="21" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Buoyant Thoughts.png" alt="22" id="22" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Brutalize.png" alt="23" id="23" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Bloodbelly Glutton.png" alt="24" id="24" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Astral Leucrocota.png" alt="25" id="25" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Avengeance Angel.png" alt="26" id="26" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Consider.png" alt="27" id="27" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Carrion Scythe.png" alt="28" id="28" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Brightflame Phoenix.png" alt="29" id="29" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Astralhorn Familiar.png" alt="30" id="30" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ayala's Blessing.png" alt="31" id="31" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Consult the Dewdrops.png" alt="32" id="32" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Channeler of the Veil.png" alt="33" id="33" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Brimstone Oration.png" alt="34" id="34" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Biocultivator.png" alt="35" id="35" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Banishing Initiate.png" alt="36" id="36" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cryptosphinx.png" alt="37" id="37" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Chigau, the Red Market.png" alt="38" id="38" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Bugrund's Gambit.png" alt="39" id="39" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Byron's Gambit.png" alt="40" id="40" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Battlesuit Prototyping.png" alt="41" id="41" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Daring Escapade.png" alt="42" id="42" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Corpsecaster Mage.png" alt="43" id="43" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Careless Violence.png" alt="44" id="44" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Canal Lurker.png" alt="45" id="45" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Beyond the Veil.png" alt="46" id="46" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Diligent Fishermen.png" alt="47" id="47" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Corrupted Memory.png" alt="48" id="48" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cinderhoof Minotaur.png" alt="49" id="49" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Consuming Symbiosis.png" alt="50" id="50" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Bioluminescent Display.png" alt="51" id="51" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Dream Monologue.png" alt="52" id="52" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crypt Gnawer.png" alt="53" id="53" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Conquer Psyche.png" alt="54" id="54" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Critters' Companion.png" alt="55" id="55" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cai Lan, the Puppeteer.png" alt="56" id="56" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Duncaster Nightwatcher.png" alt="57" id="57" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crypt Tutor.png" alt="58" id="58" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Creative Salvage.png" alt="59" id="59" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Curse of Encroaching Waters.png" alt="60" id="60" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cassia the Carefree.png" alt="61" id="61" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Expel from the Dungeon.png" alt="62" id="62" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Deathless Siege.png" alt="63" id="63" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crimson Knight.png" alt="64" id="64" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/El, Humble Apprentice_front.png" data-alt_src="img/MC25/El, Humble Apprentice_back.png" alt="65" id="65" data-flag="@XD"><button class="btn" onclick="imgFlip(65)"></button></div>
+        <div class="container"><img src="img/MC25/Celestial Concordance.png" alt="66" id="66" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Final Findings.png" alt="67" id="67" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Demon of Dark Shadows.png" alt="68" id="68" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crimson Sunrise.png" alt="69" id="69" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Elvish Wayfinder.png" alt="70" id="70" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Chronicles of the Kitsune.png" alt="71" id="71" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Forbiddance.png" alt="72" id="72" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Dias, Freed from Belief.png" alt="73" id="73" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Curio Hellkite.png" alt="74" id="74" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Embodiment of Nature.png" alt="75" id="75" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Conscious Taboo.png" alt="76" id="76" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Generated Genius.png" alt="77" id="77" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Eldritch Emergence.png" alt="78" id="78" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Damning Flames.png" alt="79" id="79" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Esalia, Steward of Caer Crann.png" alt="80" id="80" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Entelan Idealist.png" alt="81" id="81" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Hand of Dominion_front.png" data-alt_src="img/MC25/Hand of Dominion_back.png" alt="82" id="82" data-flag="@XD"><button class="btn" onclick="imgFlip(82)"></button></div>
+        <div class="container"><img src="img/MC25/Enopraxia's Endeavor.png" alt="83" id="83" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Exhilarating Prescience.png" alt="84" id="84" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Field Tender.png" alt="85" id="85" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Evolution's End.png" alt="86" id="86" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Hydrolyze.png" alt="87" id="87" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Erebos, the Imminent End.png" alt="88" id="88" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Extraction Mercenary.png" alt="89" id="89" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Glimmerbark Treant.png" alt="90" id="90" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Folsen, King of Valimir.png" alt="91" id="91" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Iekin's Portal_front.png" data-alt_src="img/MC25/Iekin's Portal_back.png" alt="92" id="92" data-flag="@XD"><button class="btn" onclick="imgFlip(92)"></button></div>
+        <div class="container"><img src="img/MC25/Expose.png" alt="93" id="93" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Feeding Time.png" alt="94" id="94" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gorganith, Ruin Maw.png" alt="95" id="95" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fulguration.png" alt="96" id="96" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Imagine.png" alt="97" id="97" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Greedstoker Demon.png" alt="98" id="98" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ferocious Flame.png" alt="99" id="99" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Into the Woods.png" alt="100" id="100" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gaoming, Foxes' Friend.png" alt="101" id="101" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Inner Thoughts.png" alt="102" id="102" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Groz, the Nightshaper.png" alt="103" id="103" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Festival Sabotage.png" alt="104" id="104" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Kantra of Bounty.png" alt="105" id="105" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gao'Wu, Humble Sibyl.png" alt="106" id="106" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Iterative Designer.png" alt="107" id="107" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Halford, the Rightful King.png" alt="108" id="108" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fiery Erasure.png" alt="109" id="109" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Kou, Primal Shepherd.png" alt="110" id="110" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/General of Kinjiru Castle.png" alt="111" id="111" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Keranos's Ideosphinx.png" alt="112" id="112" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Inevitable Future.png" alt="113" id="113" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Firebelly Toad.png" alt="114" id="114" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mattia, Hero of Tinyvale.png" alt="115" id="115" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Hanabira, Kogane's Legacy.png" alt="116" id="116" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Logic Module.png" alt="117" id="117" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Inexorable Epidemic.png" alt="118" id="118" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fires of Renewal.png" alt="119" id="119" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mob Rallier.png" alt="120" id="120" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Helena, the Awakener.png" alt="121" id="121" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Makodonis, Prime Exemplar.png" alt="122" id="122" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Jejun, Dark Hunter.png" alt="123" id="123" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Flamecloaked Artisan.png" alt="124" id="124" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Natural Philosopher.png" alt="125" id="125" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Heliod, the Ceaseless Dawn.png" alt="126" id="126" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Megalokraken.png" alt="127" id="127" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Kai'Long, the Call of the Dark.png" alt="128" id="128" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/From Ancient Tomes.png" alt="129" id="129" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Nitrous Renewer.png" alt="130" id="130" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Herald of the White Orchid.png" alt="131" id="131" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mischievous Sprite.png" alt="132" id="132" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Legion of Giradrus.png" alt="133" id="133" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Heartforge Savant.png" alt="134" id="134" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Olten Surveyor.png" alt="135" id="135" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Inconspicuous Loxodon.png" alt="136" id="136" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mizuki, Lady of All Waters.png" alt="137" id="137" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Leyline Invoker.png" alt="138" id="138" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Hellkite Annihilator.png" alt="139" id="139" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Performer of Growth_front.png" data-alt_src="img/MC25/Performer of Growth_back.png" alt="140" id="140" data-flag="@XD"><button class="btn" onclick="imgFlip(140)"></button></div>
+        <div class="container"><img src="img/MC25/Justiciar Overseer.png" alt="141" id="141" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ocean's Edge Kraken.png" alt="142" id="142" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Malefic Portal.png" alt="143" id="143" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Hinterland Ritualist.png" alt="144" id="144" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Petal Scatterer.png" alt="145" id="145" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Kernel Quarantine.png" alt="146" id="146" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ominous Discovery.png" alt="147" id="147" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mennin Pack.png" alt="148" id="148" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Identity Module.png" alt="149" id="149" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Powercell Cultivator.png" alt="150" id="150" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Legacy Warmask.png" alt="151" id="151" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Power Control.png" alt="152" id="152" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mutual Destruction.png" alt="153" id="153" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lt. Daisy Saxon.png" alt="154" id="154" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Primal Resurgence.png" alt="155" id="155" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Luna, Loyal Friend.png" alt="156" id="156" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Prognosticate.png" alt="157" id="157" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Nherix, the Soulcage.png" alt="158" id="158" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Martial Maestro.png" alt="159" id="159" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Primordial Artisan.png" alt="160" id="160" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Margyd's Celebrant.png" alt="161" id="161" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Pull from Beyond.png" alt="162" id="162" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Niu Mo Wang, Ashen Absolution.png" alt="163" id="163" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Metal Munch.png" alt="164" id="164" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Relentless Pathcutter.png" alt="165" id="165" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Once More with Heart.png" alt="166" id="166" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Realm Crossers.png" alt="167" id="167" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Noxious Upwelling.png" alt="168" id="168" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Minister of Zealots.png" alt="169" id="169" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Relic Corrosion.png" alt="170" id="170" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Order Module.png" alt="171" id="171" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Reconstructed Adept.png" alt="172" id="172" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Oriq Soulweaver.png" alt="173" id="173" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Nacatl Skirmisher.png" alt="174" id="174" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Root Module.png" alt="175" id="175" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Pious Flutist.png" alt="176" id="176" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Reflected Moment.png" alt="177" id="177" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Pestilent Scavenger.png" alt="178" id="178" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Neon Claw Knight.png" alt="179" id="179" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Rova, the Fleshweaver.png" alt="180" id="180" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Promised Exaltation.png" alt="181" id="181" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Retort Nonsense.png" alt="182" id="182" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Power Module.png" alt="183" id="183" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Oathbreaker Orc.png" alt="184" id="184" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Runebound Disciple.png" alt="185" id="185" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Proud Lion_front.png" data-alt_src="img/MC25/Proud Lion_back.png" alt="186" id="186" data-flag="@XD"><button class="btn" onclick="imgFlip(186)"></button></div>
+        <div class="container"><img src="img/MC25/Rixia, Rift Shunted.png" alt="187" id="187" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Professor's Notes.png" alt="188" id="188" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ominous Dragoncaller.png" alt="189" id="189" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Savage Congregation.png" alt="190" id="190" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Queen Andarli, the Fierce.png" alt="191" id="191" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Root Corruption.png" alt="192" id="192" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Reclusive Augur.png" alt="193" id="193" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Overwhelming Armies.png" alt="194" id="194" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Stardust Surveyor.png" alt="195" id="195" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Seraph of the Stage.png" alt="196" id="196" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/A Rush of Stillness in the Air.png" alt="197" id="197" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Rhysta's Gambit.png" alt="198" id="198" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Paint with Starflame.png" alt="199" id="199" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Studies Past.png" alt="200" id="200" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sigil of the Many.png" alt="201" id="201" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Scatter Riches.png" alt="202" id="202" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Salome's Intervention.png" alt="203" id="203" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Prince of Stars.png" alt="204" id="204" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Vassal of the Wild.png" alt="205" id="205" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Solari's Faithful.png" alt="206" id="206" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Stillmarsh Brinecatcher.png" alt="207" id="207" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sedraxis Trepanator.png" alt="208" id="208" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Quantum Bit.png" alt="209" id="209" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Verdant Sanctuary.png" alt="210" id="210" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Spectral Chains.png" alt="211" id="211" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Study the Maps.png" alt="212" id="212" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sesilius of Wicked Ways.png" alt="213" id="213" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ragavan, Most Wanted.png" alt="214" id="214" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Victory Over Phyrexia_front.png" data-alt_src="img/MC25/Victory Over Phyrexia_back.png" alt="215" id="215" data-flag="@XD"><button class="btn" onclick="imgFlip(215)"></button></div>
+        <div class="container"><img src="img/MC25/Tegan, the Sparrowhawk.png" alt="216" id="216" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/A Sucker for You.png" alt="217" id="217" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Shikai Revenant.png" alt="218" id="218" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Reckless Mutationist.png" alt="219" id="219" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Vivien the Sagittar.png" alt="220" id="220" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Unwrite.png" alt="221" id="221" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Unseen Maniac.png" alt="222" id="222" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sultan of Avarice.png" alt="223" id="223" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Scarletblood Hound.png" alt="224" id="224" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Vorreia, Farseer.png" alt="225" id="225" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Valina's Aid.png" alt="226" id="226" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Veiled by the Blizzard.png" alt="227" id="227" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Surge of Darkness.png" alt="228" id="228" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Scourge of the Mountains_front.png" data-alt_src="img/MC25/Scourge of the Mountains_back.png" alt="229" id="229" data-flag="@XD"><button class="btn" onclick="imgFlip(229)"></button></div>
+        <div class="container"><img src="img/MC25/Warfield Excavator.png" alt="230" id="230" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Visions of Sand and Steel.png" alt="231" id="231" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Way of Water.png" alt="232" id="232" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Troupe Smuggler.png" alt="233" id="233" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Tunu, Ancient Shaper.png" alt="234" id="234" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Wildlife Sketches.png" alt="235" id="235" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Xifang Hu, Light Within.png" alt="236" id="236" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Worn Study.png" alt="237" id="237" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Unstill Unlife.png" alt="238" id="238" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Valeri Kripac.png" alt="239" id="239" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Xira, Scatterer of Seeds.png" alt="240" id="240" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Yujei, Crane Companion.png" alt="241" id="241" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Yaran's Gambit.png" alt="242" id="242" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Void Portal.png" alt="243" id="243" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Voidflare.png" alt="244" id="244" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Yeshin of New Humanity.png" alt="245" id="245" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Zareen, the Second Shah_front.png" data-alt_src="img/MC25/Zareen, the Second Shah_back.png" alt="246" id="246" data-flag="@XD"><button class="btn" onclick="imgFlip(246)"></button></div>
+        <div class="container"><img src="img/MC25/Zirrat, the Soulsearcher.png" alt="247" id="247" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Young Necromancer.png" alt="248" id="248" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Xiusheng of the Dragon Realm.png" alt="249" id="249" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Zadyk Ritualist.png" alt="250" id="250" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="251" id="251" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="252" id="252" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="253" id="253" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="254" id="254" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="255" id="255" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Frayed Nerves.png" alt="256" id="256" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Delve for Treasures.png" alt="257" id="257" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Edarna the Everforge.png" alt="258" id="258" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Living Supernova.png" alt="259" id="259" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Akrianos, Redeemed Avenger.png" alt="260" id="260" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Heddwyn, the Law.png" alt="261" id="261" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Salome.png" alt="262" id="262" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sofia, Fortune's Fated.png" alt="263" id="263" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Petal-Weaver Alexa.png" alt="264" id="264" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gathering the Gang.png" alt="265" id="265" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lost Through Dreams.png" alt="266" id="266" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Avalia, Cyber Stalker.png" alt="267" id="267" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Twinfire Dragon.png" alt="268" id="268" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Tend to the Grove.png" alt="269" id="269" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Tendrilsnare.png" alt="270" id="270" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="271" id="271" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="272" id="272" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="273" id="273" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="274" id="274" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="275" id="275" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Alonzo, Departed Detective.png" alt="276" id="276" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cosmic Coalescing.png" alt="277" id="277" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Irbek, Crocodile Hunter.png" alt="278" id="278" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Comet, Pulled from Orbit.png" alt="279" id="279" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fulfill Twisted Dreams.png" alt="280" id="280" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lay Bare Ambitions.png" alt="281" id="281" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fiery Truthseeker.png" alt="282" id="282" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Oozing Yaoguai.png" alt="283" id="283" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Commanding Princess.png" alt="284" id="284" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Helene Trant.png" alt="285" id="285" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Somber River Bearer.png" alt="286" id="286" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Paul, Rock Bottom.png" alt="287" id="287" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Whisperwoods Exploration.png" alt="288" id="288" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Flare Blitz.png" alt="289" id="289" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/In Dire Straits.png" alt="290" id="290" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="291" id="291" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="292" id="292" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="293" id="293" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="294" id="294" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="295" id="295" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Key to the Nexus.png" alt="296" id="296" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="297" id="297" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="298" id="298" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="299" id="299" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="300" id="300" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="301" id="301" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="302" id="302" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="303" id="303" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="304" id="304" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="305" id="305" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Aparodist.png" alt="306" id="306" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Barx, Interplanar Mastermind.png" alt="307" id="307" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Blind Eternal.png" alt="308" id="308" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Formless Eidolon.png" alt="309" id="309" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/The Infinite.png" alt="310" id="310" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Restless Explorer.png" alt="311" id="311" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Transdimensional Visitor.png" alt="312" id="312" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Zareen's Pariah.png" alt="313" id="313" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ayala's Effigy.png" alt="314" id="314" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Barten's Journal.png" alt="315" id="315" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Defected Android.png" alt="316" id="316" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gate of Realms.png" alt="317" id="317" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Giltwork Legacy.png" alt="318" id="318" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Goblin War Chariot.png" alt="319" id="319" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Harvest Reaper.png" alt="320" id="320" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/L.O.T.U.S..png" alt="321" id="321" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lightblessed Claymore.png" alt="322" id="322" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Masterwork Archivist.png" alt="323" id="323" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Monument to the Fallen Man.png" alt="324" id="324" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Pinnacle of Purity.png" alt="325" id="325" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sage's Ashes.png" alt="326" id="326" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Soul of New Alores.png" alt="327" id="327" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Soul-Synthesizer.png" alt="328" id="328" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Unicorn of the Vale.png" alt="329" id="329" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Volatile Stonework.png" alt="330" id="330" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Voyager's Ark.png" alt="331" id="331" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Wayfarer's Lantern.png" alt="332" id="332" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Xueyang San.png" alt="333" id="333" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="334" id="334" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="335" id="335" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="336" id="336" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="337" id="337" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="338" id="338" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="339" id="339" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="340" id="340" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Pool of Light.png" alt="341" id="341" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Flooded Morass.png" alt="342" id="342" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lavatorn Fields.png" alt="343" id="343" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Flourishing Crevasse.png" alt="344" id="344" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Heart of the Glade.png" alt="345" id="345" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sedate Tundra.png" alt="346" id="346" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Murmuring Falls.png" alt="347" id="347" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crumbling Precipice.png" alt="348" id="348" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Rampant Summit.png" alt="349" id="349" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Resplendent Substratum.png" alt="350" id="350" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ocean Monastery.png" alt="351" id="351" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Floodwater Depths.png" alt="352" id="352" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Shardstone Rift.png" alt="353" id="353" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Timber Range.png" alt="354" id="354" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Amber Hills.png" alt="355" id="355" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Gloomcover Steppe.png" alt="356" id="356" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Fungal Mire.png" alt="357" id="357" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Lush Oasis.png" alt="358" id="358" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Frostfire Geysers.png" alt="359" id="359" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Spiraling Canyon.png" alt="360" id="360" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Arctic Mine.png" alt="361" id="361" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Nomad's Township.png" alt="362" id="362" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Shifting Glade.png" alt="363" id="363" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Crystal Cavern.png" alt="364" id="364" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Forgotten Steppe.png" alt="365" id="365" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Barren Desolation.png" alt="366" id="366" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Grim Bastion.png" alt="367" id="367" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Mysterious Cataract.png" alt="368" id="368" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Magmatic Torrent.png" alt="369" id="369" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sunlit Highland.png" alt="370" id="370" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sunlit Meadow.png" alt="371" id="371" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Seaside Grotto.png" alt="372" id="372" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Midnight Gate.png" alt="373" id="373" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cloudpeak Spires.png" alt="374" id="374" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Ancestral Glade.png" alt="375" id="375" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Serene Chapel.png" alt="376" id="376" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Cresting Bay.png" alt="377" id="377" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Swarming Midden.png" alt="378" id="378" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Firehearth Halls.png" alt="379" id="379" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Wise Old Oak.png" alt="380" id="380" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="381" id="381" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="382" id="382" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="383" id="383" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="384" id="384" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/er.png" alt="385" id="385" data-flag="@ER"></div>
+        <div class="container"><img src="img/MC25/Bustling Marketplace.png" alt="386" id="386" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Channeling Stone.png" alt="387" id="387" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/City Gate.png" alt="388" id="388" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Enchanting Palace.png" alt="389" id="389" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Heart of Zhedina.png" alt="390" id="390" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Nebula of Empty Gold.png" alt="391" id="391" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/New Divide.png" alt="392" id="392" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Shikai's Redoubt.png" alt="393" id="393" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Sunrise Orchard.png" alt="394" id="394" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Timeworn Crags.png" alt="395" id="395" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/Wayfarer's Shrine.png" alt="396" id="396" data-flag="@X"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="397" id="397" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="398" id="398" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="399" id="399" data-flag="@E"></div>
+        <div class="container"><img src="img/MC25/e.png" alt="400" id="400" data-flag="@E"></div>
+    </div></div>
+
+    <script>
+        // Function to apply logic based on the data-flag
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.grid-container img');
+
+            images.forEach(img => {
+                const flag = img.getAttribute('data-flag');
+
+                if (flag === '@N') {
+                    img.src = './img/card_back.png';
+                }
+
+                if (flag === '@E') {
+                    img.src = './img/e.png';
+                }
+
+                if (flag === '@ER') {
+                    img.src = './img/er.png';
+                }
+
+                img.style.visibility = 'visible';                
+            });
+
+        });
+
+    function imgFlip(num) {
+        tmp = document.getElementById(num).src;
+        document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+        document.getElementById(num).dataset.alt_src = tmp;
+    }
+    </script>
+
+</body>
+</html>

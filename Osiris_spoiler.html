@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osiris Deck Preview</title>
+    <style>
+        body {
+            background: url('img/Osiris.jpg');
+            color: #ffffff;
+            font-family: "Beleren", sans-serif;
+            margin: 2%;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(30, 30, 30, 0.9);            
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .column img.has-flip-overlay {
+            height: auto;                 
+            height: 20px;
+            object-fit: contain;
+            object-position: top;
+        }
+
+        .column img {
+            width: 100%;
+            height: 20px;
+            object-fit: cover;
+            object-position: 100% 0;
+            object-position: top;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .column img:last-child {
+            height: auto;
+            object-fit: contain;
+            object-position: top;
+        }
+
+        .main-container {
+            border-radius: 15px;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            background: rgba(30, 30, 30, 0.9);            
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .preview-container {
+            width: 400px;
+            margin-top: 100px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: start;
+        }
+
+        #fullCardPreview {
+            padding-left: 25px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .empty-placeholder {
+            width: 100%;
+            max-height: 100%;
+            background: url('../img/default.png') center/contain no-repeat;
+        }
+
+        #copyButton {
+            position: fixed;
+            transform: translate(-2.5%, 1300%);
+            display: block;
+            background-color: #3a3a3a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        #copyButton:hover {
+            background-color: #1a1a1a;
+        }
+
+        #backButton {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backButton img {
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-container">
+            <h1 class="title">Osiris — Duel Deck</h1>
+            <div class="columns">
+                <div class="column" id="lands"><span></span>Lands</div>
+                <div class="column" id="one"><span></span>1</div>
+                <div class="column" id="two"><span></span>2</div>
+                <div class="column" id="three"><span></span>3</div>
+                <div class="column" id="four"><span></span>4</div>
+                <div class="column" id="five"><span></span>5</div>
+                <div class="column" id="six"><span></span>6</div>
+                <div class="column" id="seven"><span></span>7+</div>
+                <div class="column" id="sideboard"><span></span>Sideboard</div>
+            </div>
+        </div>
+        <div class="preview-container">
+        <img id="fullCardPreview" class="full-card-preview" src="../img/default.png" alt="Full Card Preview">
+        <div class="preview-container">
+    </div>
+    <button id="backButton" onclick="window.location.href='index.html';">
+        <img src="img/back.png" alt="Back">
+    </button>
+    <button id="copyButton" onclick="copyToClipboard()">Copy Deck to Clipboard</button>
+    <script>
+const imageData = {
+        lands: [
+            { name: 'City Circuit', count: 4 },
+            { name: 'Touring Track', count: 2 },
+            { name: 'Busy Slums', count: 2 },
+            { name: 'Check Point', count: 2 },
+            { name: 'Outer Ducts', count: 2 },
+            { name: 'Osiris Headquarters', count: 3 },
+            { name: 'Underground', count: 1 },
+            { name: 'Island', count: 2 },
+            { name: 'Mountain', count: 2 },
+            { name: 'Plains', count: 2 },
+            { name: 'Quantum Prime Circuit', count: 1 },
+            { name: 'Barren Highway', count: 2 },
+
+        ],
+        one: [
+            { name: 'Osiris Chaser', count: 4 },
+            { name: 'Fatal Crash', count: 3 },
+            { name: 'Over-Rev', count: 3 },
+            { name: 'Multiboost', count: 3 },
+            { name: 'Team Lounge', count: 2 },
+        ],
+        two: [
+            { name: 'Mana Harness', count: 2 },
+            { name: 'Gen 2 Mana Vehicle', count: 4 },
+            { name: 'Orissa\'s Talent', count: 1 },
+        ],
+        three: [
+            { name: 'Orissa\'s Rivalry', count: 2 },
+            { name: 'Refuel', count: 2 },
+            { name: 'Surge MV', count: 2 },
+            { name: 'Test Drive', count: 2 },
+        ],
+        four: [
+            { name: 'Osiris GT M2', count: 2 },
+            { name: 'Kiss Goodbye', count: 2 },
+        ],
+        five: [],
+        six: [
+            { name: 'Grand Finale', count: 2 },
+        ],
+        seven: [],
+        sideboard: [
+            { name: 'Bifurcated Crash', count: 2 },
+            { name: 'Bifurcated Will', count: 2 },
+            { name: 'Car Jacker', count: 1 },
+            { name: 'Clouded Factory', count: 2 },
+            { name: 'Orissa\'s Talent', count: 1 },
+            { name: 'Pitstop', count: 1 },
+            { name: 'Roadster Rager MV', count: 3 },
+            { name: 'Team Lounge', count: 1 },
+            { name: 'Victory at Any Cost', count: 1 },
+            { name: 'Orissa, the Prodigy', count: 1 },
+        ],
+    };
+
+        const basePath = '../img/Osiris/';
+        const fullCardPreview = document.getElementById('fullCardPreview');
+
+        Object.keys(imageData).forEach(column => {
+            const columnDiv = document.getElementById(column);
+
+            imageData[column].forEach(card => {
+                for (let i = 0; i < card.count; i++) {
+                    const img = document.createElement('img');
+                    img.src = `${basePath}${column}/${card.name.replace(/ /g, '%20')}.png`;
+                    img.alt = card.name;
+
+                    img.addEventListener('mouseover', () => {
+                        fullCardPreview.src = img.src;
+                        fullCardPreview.style.display = 'block';
+                        fullCardPreview.dataset.currentImage = img.src;
+                        fullCardPreview.dataset.flipImage = card.flip
+                            ? `${basePath}${column}/${card.flipImage.replace(/ /g, '%20')}.png`
+                            : '';
+                        updatePreviewOverlay(card.flip);
+                    });
+
+                    img.addEventListener('click', () => {
+                        if (card.flip) {
+                            const isFlipped = fullCardPreview.classList.contains('flipped');
+                            if (isFlipped) {
+                                fullCardPreview.src = fullCardPreview.dataset.currentImage;
+                                fullCardPreview.classList.remove('flipped');
+                            } else {
+                                fullCardPreview.src = fullCardPreview.dataset.flipImage;
+                                fullCardPreview.classList.add('flipped');
+                            }
+                            updatePreviewOverlay(card.flip);
+                        }
+                    });
+
+                    columnDiv.appendChild(img);
+                }
+            });
+        });
+
+        function updatePreviewOverlay(hasFlip) {
+            const existingOverlay = fullCardPreview.querySelector('.flip-overlay');
+            if (existingOverlay) {
+                existingOverlay.remove();
+            }
+
+            if (hasFlip) {
+                const overlay = document.createElement('div');
+                overlay.classList.add('flip-overlay');
+                fullCardPreview.appendChild(overlay);
+            }
+        }
+
+        fullCardPreview.addEventListener('click', () => {
+            const flipImage = fullCardPreview.dataset.flipImage;
+            if (flipImage) {
+                const isFlipped = fullCardPreview.classList.contains('flipped');
+                if (isFlipped) {
+                    fullCardPreview.src = fullCardPreview.dataset.currentImage;
+                    fullCardPreview.classList.remove('flipped');
+                } else {
+                    fullCardPreview.src = flipImage;
+                    fullCardPreview.classList.add('flipped');
+                }
+                updatePreviewOverlay(true);
+            }
+        });
+
+        document.querySelectorAll('.column').forEach(column => {
+            const images = column.querySelectorAll('img');
+            const count = images.length;
+            const columnTitle = column.querySelector('span') || document.createElement('span');
+            
+            columnTitle.textContent = `(${count})`;
+            
+            if (!column.contains(columnTitle)) {
+                column.prepend(columnTitle);
+            }
+        });
+
+        function copyToClipboard() {
+            const sections = ['lands', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'sideboard'];
+            let clipboardContent = '';
+
+            sections.forEach((section, index) => {
+                if (imageData[section].length > 0) {
+                    imageData[section].forEach(card => {
+                        clipboardContent += `${card.count} ${card.name}\n`;
+                    });
+
+                    if (section === 'seven' && imageData['sideboard'].length > 0) {
+                        clipboardContent += '\n';
+                    }
+                }
+            });
+
+            navigator.clipboard.writeText(clipboardContent.trim()).then(() => {
+                alert("Copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text to clipboard: ", err);
+            });
+        }
+    </script>
+</body>
+</html>

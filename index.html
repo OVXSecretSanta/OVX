@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        .heading {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            z-index: 10;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: -1;
+        }
+
+        .background-img.left {
+            background-image: url('img/Osiris.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            transition: filter 0.3s;
+        }
+
+        .background-img.right {
+            background-image: url('img/XVX.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            transition: filter 0.3s;
+        }
+
+        .deck-box-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .deck-box {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #orissa-deck {
+            left: 25%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #xerx-deck {
+            left: 75%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .deck-box-img {
+            width: 100%;
+            height: 75vh;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .deck-box:hover .deck-box-img {
+            transform: scale(1.05);
+        }
+
+        .spacer {
+            width: 120px;
+        }
+
+        .scrap-footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .scrap-footer img {
+            width: 50px;
+            height: 50px;
+        }
+
+        #downloadButton {
+            position: fixed;
+            bottom: 7.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2b9e0e;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 32px;
+            z-index: 10;
+        }
+
+        #downloadButton:hover {
+            background-color: #247a0f;
+        }
+
+        .popup {
+            text-align: left;
+            position: fixed;
+            bottom: 0%;
+            left: -100%;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            white-space: nowrap;
+            z-index: 20;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .popup.show {
+            transform: translateX(100vw);
+        }
+
+        .mute-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .play-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heading">The Greatest Race in MSE Secret Santa History</div>
+
+    <div class="background-container">
+        <div class="background-img left" id="left-bg"></div>
+        <div class="background-img right" id="right-bg"></div>
+    </div>
+    <div class="deck-box-container">
+        <button class="deck-box" id="orissa-deck">
+            <img src="img/Orissa_Deck_Box.png" alt="Orissa Deck Box" class="deck-box-img" id="orissa-img">
+        </button>
+        <button class="deck-box" id="xerx-deck">
+            <img src="img/Xerx_Deck_Box.png" alt="Xerx Deck Box" class="deck-box-img" id="xerx-img">
+        </button>
+    </div>
+    <button id="downloadButton" onclick="window.location.href='download/OVX.zip';">Download</button>
+    <button class="scrap-footer" onclick="openScrap()">
+        <img src="img/scrap.png" alt="Scrap" />
+    </button>    
+    <div id="muteButton">
+        <img id="muteButton" src="img/play.png" alt="Mute/Play" class="mute-button" />    </div>
+    <div id="popup" class="popup">Now Playing: Night Racing by Emmraan</div>
+    <audio id="backgroundMusic" loop>
+        <source src="sound/night-racing-273970.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.getElementById("orissa-deck").addEventListener("click", function() {
+            backgroundMusic.play();
+            window.location.href = "Osiris_spoiler.html"; //go to Osiris page
+        });
+
+        document.getElementById("xerx-deck").addEventListener("click", function() {
+            backgroundMusic.play();
+            window.location.href = "XVX_spoiler.html"; //go to XVX page
+        });
+
+        const orissaDeck = document.getElementById("orissa-deck");
+        const xerxDeck = document.getElementById("xerx-deck");
+        const leftBackground = document.getElementById("left-bg");
+        const rightBackground = document.getElementById("right-bg");
+
+        orissaDeck.addEventListener("mouseenter", function() {
+            rightBackground.style.filter = "grayscale(100%)";
+        });
+        orissaDeck.addEventListener("mouseleave", function() {
+            rightBackground.style.filter = "none";
+        });
+
+        xerxDeck.addEventListener("mouseenter", function() {
+            leftBackground.style.filter = "grayscale(100%)";
+        });
+        xerxDeck.addEventListener("mouseleave", function() {
+            leftBackground.style.filter = "none";
+        });
+
+        const muteButton = document.getElementById("muteButton");
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        const popup = document.getElementById("popup");
+
+        let isMuted = true; //start muted
+        backgroundMusic.muted = isMuted;
+
+        muteButton.addEventListener("click", () => {
+            const currentSrc = muteButton.src.split('/').pop();
+
+            if (currentSrc === "play.png") {
+                muteButton.src = "img/play.png";
+            } else if (currentSrc === "play.png") {
+                muteButton.src = "img/play.png";
+            }
+        });
+
+        const updateUI = () => {
+            muteButton.src = isMuted ? "img/play.png" : "img/play.png"; //broken
+            if (!isMuted) {
+                backgroundMusic.play();
+                muteButton.src = "img/play.png"; 
+                popup.classList.add("show");
+            } else {
+                backgroundMusic.pause();
+                muteButton.src = "img/play.png";
+                popup.classList.remove("show");
+            }
+        };
+
+        muteButton.addEventListener("click", () => {
+            isMuted = !isMuted;
+            backgroundMusic.muted = isMuted;
+            updateUI();
+        });
+
+        updateUI();
+
+        function openScrap() {
+            window.open("https://imgur.com/a/tDijkIm", "_blank");
+        }
+    </script>
+</body>
+</html>
