@@ -102,7 +102,7 @@
             width: 120px;
         }
 
-        .scrap-footer {
+        .dump-footer {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -111,7 +111,7 @@
             cursor: pointer;
         }
 
-        .scrap-footer img {
+        .dump-footer img {
             width: 50px;
             height: 50px;
         }
@@ -193,8 +193,8 @@
         </button>
     </div>
     <button id="downloadButton" onclick="window.location.href='download/OVX.zip';">Download</button>
-    <button class="scrap-footer" onclick="openScrap()">
-        <img src="img/scrap.png" alt="Scrap" />
+    <button class="dump-footer" onclick="openDump()">
+        <img src="img/dump.png" alt="dump" />
     </button>    
     <div id="muteButton">
         <img id="muteButton" src="img/play.png" alt="Mute/Play" class="mute-button" />    </div>
@@ -271,7 +271,7 @@
 
         updateUI();
 
-        function openScrap() {
+        function openDump() {
             window.open("https://imgur.com/a/secret-santa-decklist-dump-GN6uAuW", "_blank");
         }
     </script>
