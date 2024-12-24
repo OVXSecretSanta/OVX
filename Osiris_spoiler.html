@@ -295,27 +295,26 @@
         });
 
         function copyToClipboard() {
-            const sections = ['lands', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'sideboard'];
-            let clipboardContent = '';
+        const sections = ['lands', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'sideboard'];
+        let clipboardContent = '';
 
-            sections.forEach((section, index) => {
-                if (imageData[section].length > 0) {
-                    imageData[section].forEach(card => {
-                        clipboardContent += `${card.count} ${card.name}\n`;
-                    });
-
-                    if (section === 'seven' && imageData['sideboard'].length > 0) {
-                        clipboardContent += '\n';
-                    }
+        sections.forEach((section, index) => {
+            if (imageData[section].length > 0) {
+                if (section === 'sideboard' && clipboardContent.trim() !== '') {
+                    clipboardContent += '\n';
                 }
-            });
 
-            navigator.clipboard.writeText(clipboardContent.trim()).then(() => {
-                alert("Copied to clipboard!");
-            }).catch(err => {
-                console.error("Failed to copy text to clipboard: ", err);
-            });
-        }
+                imageData[section].forEach(card => {
+                    clipboardContent += `${card.count} ${card.name}\n`;
+                });
+            }
+        });
+
+        navigator.clipboard.writeText(clipboardContent.trim()).then(() => {
+            alert("Copied to clipboard!");
+        }).catch(err => {
+            console.error("Failed to copy text to clipboard: ", err);
+        });}
     </script>
 </body>
 </html>
