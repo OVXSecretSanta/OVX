@@ -171,7 +171,7 @@
                 { name: "Beat Bloody", count: 2 },
                 { name: "Graveyard Crusher", count: 2 },
                 { name: "Trash Treasurer", count: 3 },
-                { name: "Xerxs Subterfuge", count: 3 },
+                { name: "Xerx\'s Subterfuge", count: 3 },
                 { name: "Unfortunate Accident", count: 2, flip: true, flipImage: "Crash Survivor" }
             ],
             two: [
@@ -183,7 +183,7 @@
             ],
             three: [
                 { name: "Night Ride", count: 2 },
-                { name: "Xerxs Rivalry", count: 2 }
+                { name: "Xerx\'s Rivalry", count: 2 }
             ],
             four: [
                 { name: "Machine Rights Activist", count: 4 },
@@ -201,12 +201,12 @@
                 { name: 'Scrap Crawler', count: 2},
                 { name: 'Successful Experiment', count: 2},
                 { name: 'Taken Out Back', count: 2},
-                { name: "Xerxs Subterfuge", count: 1 },
-                { name: "Xerx the Inventive", count: 1 },
+                { name: "Xerx\'s Subterfuge", count: 1 },
+                { name: "Xerx, the Inventive", count: 1 },
             ],
         };
 
-        const basePath = 'img/XVX/';
+        const basePath = 'img/cards/'; 
         const fullCardPreview = document.getElementById('fullCardPreview');
 
         Object.keys(imageData).forEach(column => {
@@ -215,7 +215,7 @@
             imageData[column].forEach(card => {
                 for (let i = 0; i < card.count; i++) {
                     const img = document.createElement('img');
-                    img.src = `${basePath}${column}/${card.name.replace(/ /g, '%20')}.png`;
+                    img.src = `${basePath}${card.name.replace(/ /g, '%20')}.png`;
                     img.alt = card.name;
 
                     img.addEventListener('mouseover', () => {
@@ -223,7 +223,7 @@
                         fullCardPreview.style.display = 'block';
                         fullCardPreview.dataset.currentImage = img.src;
                         fullCardPreview.dataset.flipImage = card.flip
-                            ? `${basePath}${column}/${card.flipImage.replace(/ /g, '%20')}.png`
+                            ? `${basePath}${card.flipImage.replace(/ /g, '%20')}.png`
                             : '';
                         updatePreviewOverlay(card.flip);
                     });

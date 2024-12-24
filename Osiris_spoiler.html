@@ -156,64 +156,64 @@
     </button>
     <button id="copyButton" onclick="copyToClipboard()">Copy Deck to Clipboard</button>
     <script>
-const imageData = {
-        lands: [
-            { name: 'City Circuit', count: 4 },
-            { name: 'Touring Track', count: 2 },
-            { name: 'Busy Slums', count: 2 },
-            { name: 'Check Point', count: 2 },
-            { name: 'Outer Ducts', count: 2 },
-            { name: 'Osiris Headquarters', count: 3 },
-            { name: 'Underground', count: 1 },
-            { name: 'Island', count: 2 },
-            { name: 'Mountain', count: 2 },
-            { name: 'Plains', count: 2 },
-            { name: 'Quantum Prime Circuit', count: 1 },
-            { name: 'Barren Highway', count: 2 },
+        const imageData = {
+                lands: [
+                    { name: 'City Circuit', count: 4 },
+                    { name: 'Touring Track', count: 2 },
+                    { name: 'Busy Slums', count: 2 },
+                    { name: 'Check Point', count: 2 },
+                    { name: 'Outer Ducts', count: 2 },
+                    { name: 'Osiris Headquarters', count: 3 },
+                    { name: 'Underground', count: 1 },
+                    { name: 'Island', count: 2 },
+                    { name: 'Mountain', count: 2 },
+                    { name: 'Plains', count: 2 },
+                    { name: 'Quantum Prime Circuit', count: 1 },
+                    { name: 'Barren Highway', count: 2 },
 
-        ],
-        one: [
-            { name: 'Osiris Chaser', count: 4 },
-            { name: 'Fatal Crash', count: 3 },
-            { name: 'Over-Rev', count: 3 },
-            { name: 'Multiboost', count: 3 },
-            { name: 'Team Lounge', count: 2 },
-        ],
-        two: [
-            { name: 'Mana Harness', count: 2 },
-            { name: 'Gen 2 Mana Vehicle', count: 4 },
-            { name: 'Orissa\'s Talent', count: 1 },
-        ],
-        three: [
-            { name: 'Orissa\'s Rivalry', count: 2 },
-            { name: 'Refuel', count: 2 },
-            { name: 'Surge MV', count: 2 },
-            { name: 'Test Drive', count: 2 },
-        ],
-        four: [
-            { name: 'Osiris GT M2', count: 2 },
-            { name: 'Kiss Goodbye', count: 2 },
-        ],
-        five: [],
-        six: [
-            { name: 'Grand Finale', count: 2 },
-        ],
-        seven: [],
-        sideboard: [
-            { name: 'Bifurcated Crash', count: 2 },
-            { name: 'Bifurcated Will', count: 2 },
-            { name: 'Car Jacker', count: 1 },
-            { name: 'Clouded Factory', count: 2 },
-            { name: 'Orissa\'s Talent', count: 1 },
-            { name: 'Pitstop', count: 1 },
-            { name: 'Roadster Rager MV', count: 3 },
-            { name: 'Team Lounge', count: 1 },
-            { name: 'Victory at Any Cost', count: 1 },
-            { name: 'Orissa, the Prodigy', count: 1 },
-        ],
-    };
+                ],
+                one: [
+                    { name: 'Osiris Chaser', count: 4 },
+                    { name: 'Fatal Crash', count: 3 },
+                    { name: 'Over-Rev', count: 3 },
+                    { name: 'Multiboost', count: 3 },
+                    { name: 'Team Lounge', count: 2 },
+                ],
+                two: [
+                    { name: 'Mana Harness', count: 2 },
+                    { name: 'Gen 2 Mana Vehicle', count: 4 },
+                    { name: 'Orissa\'s Talent', count: 1 },
+                ],
+                three: [
+                    { name: 'Orissa\'s Rivalry', count: 2 },
+                    { name: 'Refuel', count: 2 },
+                    { name: 'Surge MV', count: 2 },
+                    { name: 'Test Drive', count: 2 },
+                ],
+                four: [
+                    { name: 'Osiris GT M2', count: 2 },
+                    { name: 'Kiss Goodbye', count: 2 },
+                ],
+                five: [],
+                six: [
+                    { name: 'Grand Finale', count: 2 },
+                ],
+                seven: [],
+                sideboard: [
+                    { name: 'Bifurcated Crash', count: 2 },
+                    { name: 'Bifurcated Will', count: 2 },
+                    { name: 'Car Jacker', count: 1 },
+                    { name: 'Clouded Factory', count: 2 },
+                    { name: 'Orissa\'s Talent', count: 1 },
+                    { name: 'Pitstop', count: 1 },
+                    { name: 'Roadster Rager MV', count: 3 },
+                    { name: 'Team Lounge', count: 1 },
+                    { name: 'Victory at Any Cost', count: 1 },
+                    { name: 'Orissa, the Prodigy', count: 1 },
+                ],
+            };
 
-        const basePath = 'img/Osiris/';
+        const basePath = 'img/cards/'; 
         const fullCardPreview = document.getElementById('fullCardPreview');
 
         Object.keys(imageData).forEach(column => {
@@ -222,7 +222,7 @@ const imageData = {
             imageData[column].forEach(card => {
                 for (let i = 0; i < card.count; i++) {
                     const img = document.createElement('img');
-                    img.src = `${basePath}${column}/${card.name.replace(/ /g, '%20')}.png`;
+                    img.src = `${basePath}${card.name.replace(/ /g, '%20')}.png`;
                     img.alt = card.name;
 
                     img.addEventListener('mouseover', () => {
@@ -230,7 +230,7 @@ const imageData = {
                         fullCardPreview.style.display = 'block';
                         fullCardPreview.dataset.currentImage = img.src;
                         fullCardPreview.dataset.flipImage = card.flip
-                            ? `${basePath}${column}/${card.flipImage.replace(/ /g, '%20')}.png`
+                            ? `${basePath}${card.flipImage.replace(/ /g, '%20')}.png`
                             : '';
                         updatePreviewOverlay(card.flip);
                     });
