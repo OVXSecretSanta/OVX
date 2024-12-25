@@ -144,7 +144,7 @@
             </div>
         </div>
         <div class="preview-container">
-        <img id="fullCardPreview" class="full-card-preview" src="img/default.png" alt="Full Card Preview">
+            <img id="fullCardPreview" class="full-card-preview" src="" alt="Full Card Preview">
         <div class="preview-container">
     </div>
     <button id="backButton" onclick="window.location.href='index.html';">
@@ -308,6 +308,9 @@
         }).catch(err => {
             console.error("Failed to copy text to clipboard: ", err);
         });}
+
+        const randomDefaultImage = Math.random() < 0.10 ? 'img/cards/default2.png' : 'img/cards/default.png';
+        document.getElementById('fullCardPreview').src = randomDefaultImage;
     </script>
 </body>
 </html>
