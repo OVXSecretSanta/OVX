@@ -92,10 +92,10 @@ def batch_process_images(input_folder, output_folder, default_path, corner_radiu
             process_image(input_path, output_path, default_path, corner_radius)
 
     print("Batch processing complete.")
-    
+
 # Paths for input and output folders
-input_folder = "C:/Users/Epid/Documents/GitHub/OVX/img/cards"
-output_folder = "C:/Users/Epid/Documents/GitHub/OVX/img/cards-cropped"
+input_folder = "C:/Users/Epid/Documents/OVX/New/OVX-files"
+output_folder = "C:/Users/Epid/Documents/OVX/New/OVX-files-cropped"
 default_path = os.path.join(input_folder, "default.png")
 
 batch_process_images(input_folder, output_folder, default_path)
